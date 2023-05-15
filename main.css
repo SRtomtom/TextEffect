@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #252525;
+}
+
+.line {
+  border-right: 2px solid #ffffff;
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 3em;
+  text-align: center;
+  margin: 0 auto;
+  white-space: nowrap; /*empede a quebra de linha*/
+  overflow: hidden;
+}
+
+.typing-animation {
+  animation: blinkCursor 500ms infinite normal,
+    typing 4s steps(20) 1s normal both;
+}
+
+/*Aparecer texto*/
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16em;
+  }
+}
+
+/*COLOCAR CURSOR PISCANDO*/
+@keyframes blinkCursor {
+  form {
+    border-right-color: #ffffff;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
